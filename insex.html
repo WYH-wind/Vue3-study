@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="counter">
+    <p> {{num}} </p>
+    <p> {{name}}</p>
+  </div>
+  <script>
+    const Counter={
+      data:function(){
+        return{
+          num:0,
+          name:'第一'
+        }
+      }
+    }
+   let app= Vue.createApp(Counter).mount('#counter')//创建应用，将配置对象传入//mount挂载，与上面元素相关联
+   console.log(app)//双向绑定 修改app.num,页面上的也会变
+  </script>
+</body>
+</html>
